@@ -1,6 +1,5 @@
 .container{
-    margin:auto;
-    max-width: 800px;
+    text-align: center;
 }
 body{
     background-color: black;
@@ -8,4 +7,51 @@ body{
 }
 .done{
     text-decoration: line-through;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.521);
+    text-shadow: none !important;
+}
+.box{
+    display: flex;
+    min-width: 70vw;
+    max-width: 70vw;
+    text-shadow: 1px 1px 2px rgb(38, 0, 255);
+    font-size: calc(13px + 0.6vw);
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    word-break: break-all;
+    padding: 15px;
+    margin-top: 15px;
+}
+.box div{
+    display: flex;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+input {
+    width: 40%;
+}
+.text{
+    margin-right: 10px;
+}
+.material-icons{
+    color:rgb(0, 224, 253);
+}
+.box button{
+    background-color: rgba(173, 17, 17, 0);
+    border: none;
+}
+.box button:active .material-icons{
+    transform: translate(1px, 1px)
+}
+.box button:hover .material-icons{
+    color:rgb(55, 165, 199)
+}
+.card{
+    box-shadow: 0px 2px 7px 0px rgba(255, 255, 255, 0.233);
 }
