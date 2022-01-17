@@ -1,7 +1,6 @@
 # To Do - React
-
 ### Primeiro projeto em React, para por em prática os conhecimentos aprendido.
-<img>
+<img width="500px" src="readmegif/todo.gif">
 
 #
 

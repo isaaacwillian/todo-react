@@ -14,8 +14,8 @@ function TodoForm(props) {
 
     return (
         <form>
-            <input type="text" id="text"></input>
-            <button onClick={addItem}>Add</button>
+            <input type="text" id="text" placeholder="O que eu tenho que fazer?"></input>
+            <button onClick={addItem}>+</button>
         </form>
     )
 }

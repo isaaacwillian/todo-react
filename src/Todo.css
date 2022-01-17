@@ -1,4 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container{
+    margin-top: 30px;
     text-align: center;
 }
 body{
@@ -26,25 +32,56 @@ body{
 }
 .box div{
     display: flex;
+    gap:0.5rem;
 }
 ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
+    margin-top: 30px;
 }
-input {
-    width: 40%;
+form{
+    position: relative;
+    width: 70vw;
+    margin: auto;
+    margin-top: 0.5rem;
 }
-.text{
-    margin-right: 10px;
+form button{
+    background-color: transparent;
+    color: white;
+    font-size: 3rem;
+    height: 2rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0.3rem;
+    top: 0.2rem;
+}
+form button:hover{
+    color: rgb(182, 185, 233);
+}
+form button:active{
+    transform: translate(1px, 1px)
+}
+form input {
+    width: 100%;
+    height: 2.2rem;
+    background-color: transparent;
+    border-color: rgb(38, 0, 255);
+    border-radius: 2rem;
+    color: white;
+    font-size: 1rem;
+    border-width: 1px;
+    padding: 0px 10% 0px 10px;
 }
 .material-icons{
     color:rgb(0, 224, 253);
 }
 .box button{
     background-color: rgba(173, 17, 17, 0);
-    border: none;
+
 }
 .box button:active .material-icons{
     transform: translate(1px, 1px)
@@ -52,6 +89,16 @@ input {
 .box button:hover .material-icons{
     color:rgb(55, 165, 199)
 }
+
 .card{
     box-shadow: 1px 2px 7px 0px rgba(0, 17, 255, 0.589);
+    animation: changeOpacity 1s;
+}
+@keyframes changeOpacity{
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+button{
+    cursor: pointer;
+    border: none;
 }

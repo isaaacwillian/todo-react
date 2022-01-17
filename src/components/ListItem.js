@@ -17,9 +17,9 @@ function ListItem(props) {
 
     return (
 
-        <li >
+        <li>
             <Card className={props.item.done ? "done box" : "box"}>
-                <span className="text">{props.item.text}</span>
+                <span>{props.item.text}</span>
                 <div>
                     <button onClick={() => { props.onDone(props.item) }}>
                         <DoneImg done={props.item.done}></DoneImg>

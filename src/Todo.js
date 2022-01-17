@@ -22,6 +22,9 @@ function Todo() {
     function onAddItem(text) {
 
         let item = new Item(text);
+        if (items.length !== 0) {
+            item.id = items.slice(-1)[0].id + 1;
+        }
         setItems([...items, item])
     }
 
@@ -44,7 +47,7 @@ function Todo() {
 
     return (
         <div className="container">
-            <h1>Todo</h1>
+            <h1>Lista de afazeres</h1>
 
             <TodoForm onAddItem={onAddItem}></TodoForm>
             <List onDone={onDone} onItemDeleted={onItemDeleted} items={items}></List>
