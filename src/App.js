@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import List from './components/List';
-import Item from './components/Item';
 import TodoForm from "./components/TodoForm";
 import './Todo.css'
 
@@ -8,7 +7,22 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import listReducer from "./reducers/listReducer";
 
-const store = createStore(listReducer);
+function persistState(state){
+    localStorage.setItem('savedItems', JSON.stringify(state));
+}
+function loadState(){
+    const actualState = localStorage.getItem('savedItems');
+    if(actualState){
+        return JSON.parse(actualState);
+    } else {
+        return []
+    }
+}
+const store = createStore(listReducer, loadState());
+
+store.subscribe(()=>{
+    persistState(store.getState());
+})
 
 function App() {
 

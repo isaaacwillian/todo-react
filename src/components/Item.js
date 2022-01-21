@@ -1,13 +1,15 @@
+let items = JSON.parse(localStorage.getItem('savedItems'));
+let lastId = 0;
 
-class Item {
+if(items.length !== 0){
+    lastId = ++items.slice(-1)[0].id;
+}
 
-    static lastId = 0;
+function Item (text){
 
-    constructor(text) {
-        this.id = Item.lastId++
-        this.text = text;
-        this.done = false;
-    }
+    this.id = lastId++
+    this.text = text;
+    this.done = false;
 }
 
 export default Item;
