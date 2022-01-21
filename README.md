@@ -1,5 +1,5 @@
 # To Do - React
-### Primeiro projeto em React, para por em prática os conhecimentos aprendido.
+### Primeiro projeto em React utilizando hooks para por em prática os conhecimentos aprendido.
 <img width="500px" src="readmegif/todo.gif">
 
 #
